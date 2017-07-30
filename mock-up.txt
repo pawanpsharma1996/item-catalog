@@ -1,0 +1,18 @@
+__Home page__
+Contains the list of all the categories and latest items added
+
+__Items page__
+By selecting a category from the home page, user is redirected to this page that contains all the items of this category
+
+__detail page__
+By selecting the item in the items page user is redirected to this page that contains the detail of that item with edit and delete link
+
+__edit page__
+This page contains a form to edit an item
+
+__delete page__
+This is a confirmation page that is seen before an item is deleted by the user
+
+__create page__
+This page will contain a form to create new item for a specific category
+	

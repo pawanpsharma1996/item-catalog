@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Items Catalog</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}"
+</head>
+<body>
+	<header>
+		<div id="title"><h1>Catalog App</h1></div>
+		<a id="login_button" href="{{url_for('gdisconnect')}}">Logout</a>
+	</header>
+
+	<!-- Code for flash messages -->	
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<ul>
+		{%for message in messages%}
+			<li><strong>{{message}}</strong></li>
+		{%endfor%}
+		</ul>
+	{% endif %}
+	{% endwith %}
+	<!-- Code for flash messages ends -->
+	<div id="sidebar">
+		<div id="user_info">	
+			<div id="prof_pic" class="margin"><img src="{{user.picture}}"></div>
+			<div class="details" class="margin">{{user.username}}</div>
+			<div class="details" class="margin">{{user.email}}</div>
+		</div>
+		
+		<div id="add_button" class="margin"><a href="{{url_for('newItem')}}">Add Item</div>
+	</div>
+	
+	{% for i in categories: %}
+	<ul>
+		<a href="{{url_for('viewItems', category_id=i.id)}}"><div id="category"><h2><li>{{i.name}}</li></h2></div></a>
+	</ul>
+	{% endfor %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Items Catalog</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}"
+</head>
+<body>
+	<header>
+		<div id="title"><h1>Catalog App</h1></div>
+		<a id="login_button" href="{{url_for('showLogin')}}">Login</a>
+	</header>
+	<div id="sidebar">
+		<div id="quote">“You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.”<br><br> 
+		“You know you're in love when you can't fall asleep because reality is finally better than your dreams.” 
+		</div>
+		<div id="add_button" class="margin"><a href="{{url_for('newItem')}}">Add Item</div>
+	</div>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<ul>
+		{%for message in messages%}
+			<li><strong>{{message}}</strong></li>
+		{%endfor%}
+		</ul>
+	{% endif %}
+	{% endwith %}
+
+	{% for i in categories: %}
+	<ul>
+		<a href="{{url_for('viewItems', category_id=i.id)}}"><div id="category"><h2><li>{{i.name}}</li></h2></div></a>
+	</ul>
+	{% endfor %}
+</body>
+</html>

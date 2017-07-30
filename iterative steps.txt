@@ -1,0 +1,9 @@
+--Mock-ups--
+--Routing--
+--Templates & Forms--
+--CRUD functionality
+--API endpoints
+--authentication & authorization
+
+
+--Styling & Message Flashing

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+	<title>Create Page</title>
+</head>
+<body>
+	<header>
+		<div id="title"><h1>Catalog App</h1></div>
+		<a id="login_button" href="{{url_for('gdisconnect')}}">Logout</a>
+		<a href="{{url_for('viewCatalog')}}"><img id="home" src="{{ url_for('static', filename='home_icon.png') }}"></a>
+	</header>
+	<div id="sidebar">
+		<div id="user_info">	
+			<div id="prof_pic" class="margin"><img src="{{user.picture}}"></div>
+			<div class="details" class="margin">{{user.username}}</div>
+			<div class="details" class="margin">{{user.email}}</div>
+		</div>
+	</div>
+	<h1>Create new Item</h1>
+	<form id="form_wrapper" action="{{url_for('newItem')}}" method='POST'>
+		Name : <input type="text" name="name"><br><br>
+		Category : 
+		<select name="category">
+		{%for category in categories%}
+		<option value="{{category.name}}">{{category.name}}
+		{%endfor%}
+		</option>
+		
+		</select><br><br>
+		Description : <textarea name="description" rows="4" cols="50"></textarea><br><br>
+		<input id="submit_button" type="submit">
+	</form>
+		
+</body>
+</html>

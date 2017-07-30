@@ -1,0 +1,255 @@
+header{
+	width : 100%;
+	height : auto;
+	background-color : #21efe5;
+	color : #0a1663;
+	border-radius : 15px;
+}
+h1{
+	font-family : calibri;
+}
+#title {
+	font-size : 30px;
+	display : inline-block;
+	letter-spacing : 5px;
+}
+#login_button{
+	background-color : #f4aa42;
+	font-family : calibri;
+	text-decoration : none;
+	height : 40px;
+	width : 120px;
+	font-size : 25px;
+	display : inline-block;
+	text-align : center;
+	cursor : pointer;
+	border : 2px solid #f4aa42;
+	border-radius : 5px;
+	float : right;
+	display:table-cell;
+	position : relative;
+	margin-top : 50px;
+}
+
+a{
+	text-decoration : none;
+}
+
+#category{
+	background-color : #a2ce7d;
+	height : auto;
+	display : inline-block;
+	width : 60%;
+	font-size : 20px;
+	padding : 1px;
+	color : #870932;
+	border-radius : 15px;
+	text-align : center;
+	border : 2px solid #a2ce7d
+}
+#category:hover{
+	background-color : white;
+	border-color : #870932;
+}
+
+#sidebar
+{
+	height : auto;
+	width : 30%;
+	float : right;
+	border-radius : 15px;
+	background-color : #8cf7d5;
+}
+#user_info{
+	height : auto;
+	text-align : center;
+}
+img{
+	height : 100%;
+	width : 100%;
+	border-radius : 100%;
+}
+#prof_pic{
+	width : 200px;
+	height : 200px;
+	margin : auto;
+}
+
+.details{
+	background-color : blue;
+	font-size : 18px;
+	margin-top : 10px;
+	margin-bottom : 10px;
+	border-radius : 5px;
+	color : white;
+	padding : 5px;
+}
+#add_button{
+	background-color : #f4aa42;
+	font-family : calibri;
+	text-decoration : none;
+	height : 40px;
+	width : 120px;
+	font-size : 25px;
+	display : inline-block;
+	text-align : center;
+	cursor : pointer;
+	border : 2px solid #f4aa42;
+	border-radius : 5px;
+	display: table;
+	position : relative;
+	margin: 0 auto;
+}
+
+#add_button:hover{
+	background-color : #8cf7d5;
+	border-color : #525991;
+}
+
+#items{
+	background-color : #515dba;
+	height : auto;
+	display : inline-block;
+	width : 50%;
+	font-size : 25px;
+	padding : 10px;
+	color : white;
+	border-radius : 15px;
+	text-align : center;
+	font-family : calibri;
+	border : 2px solid #515dba;
+}
+
+#items:hover{
+	background-color : white;
+	color : #515dba;
+}
+
+#category_name{
+	font-size : 50px;
+	letter-spacing : 10px;
+	color : #ba5050;
+	text-shadow: 2px 2px 30px #ba5050;
+}
+
+#home{
+	height : 80px;
+	width : 80px;
+	display : inline-block;
+	float : right;
+	display:table-cell;
+	position : relative;
+	margin-top : 30px;
+	margin-right : 20px;
+}
+
+#desc_wrapper{
+	background-color : #42b3f4;
+	border-radius : 15px;
+	width : 60%;
+	padding : 10px;
+	margin-top : 10px;
+}
+
+#item_title{
+	text-align : center;
+	color : #7a2828;
+}
+
+#edit_button, #delete_button{
+	background-color : #e8ab7d;
+	font-family : calibri;
+	text-decoration : none;
+	height : 30px;
+	width : 80px;
+	font-size : 20px;
+	display : inline-block;
+	text-align : center;
+	border : 2px solid #e8ab7d;
+	border-radius : 5px;
+	color : #7a2828;
+}
+
+#form_wrapper{
+	background-color : #42b3f4;
+	border-radius : 15px;
+	width : 60%;
+	padding : 10px;
+	margin-top : 10px;
+}
+
+#submit_button{
+	background-color : #e8ab7d;
+	font-family : calibri;
+	text-decoration : none;
+	height : 30px;
+	width : 80px;
+	font-size : 20px;
+	display : inline-block;
+	text-align : center;
+	border : 2px solid #e8ab7d;
+	border-radius : 5px;
+	color : #7a2828;
+	cursor : pointer;
+}
+
+#cancel_button{
+	background-color : red;
+	font-family : calibri;
+	text-decoration : none;
+	height : 30px;
+	width : 80px;
+	font-size : 20px;
+	display : inline-block;
+	text-align : center;
+	border : 2px solid red;
+	border-radius : 5px;
+	color : white;
+	cursor : pointer;
+	margin-left : 20px;
+	float : right;
+}
+
+#delete_button{
+	background-color : red;
+	font-family : calibri;
+	text-decoration : none;
+	height : 30px;
+	width : 80px;
+	font-size : 20px;
+	display : inline-block;
+	text-align : center;
+	border : 2px solid red;
+	border-radius : 5px;
+	color : white;
+	cursor : pointer;
+}
+
+#delete_wrapper{
+	background-color : #42b3f4;
+	border-radius : 15px;
+	width : 60%;
+	padding : 10px;
+	margin-top : 10px;
+}
+
+#quote{
+	font-size : 20px;
+	padding : 10px;
+	font-family : calibri;
+}
+
+#signin_wrapper
+{
+	background-color : #ffd59b;
+	border-radius : 15px;
+	height : auto;
+	padding : 10px;
+	margin-top : 10px;
+	text-align : center;
+}
+
+#signInButton{
+	height : 60px;
+	width : auto;
+}

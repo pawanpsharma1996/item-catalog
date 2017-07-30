@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+	<title>{{category.name}}</title>
+</head>
+<body>
+	<header>
+		<div id="title"><h1>Catalog App</h1></div>
+		<a id="login_button" href="{{url_for('gdisconnect')}}">Logout</a>
+		<a href="{{url_for('viewCatalog')}}"><img id="home" src="{{ url_for('static', filename='home_icon.png') }}"></a>
+	</header>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<ul>
+		{%for message in messages%}
+			<li><strong>{{message}}</strong></li>
+		{%endfor%}
+		</ul>
+	{% endif %}
+	{% endwith %}
+	<div id="sidebar">
+		<div id="user_info">	
+			<div id="prof_pic" class="margin"><img src="{{user.picture}}"></div>
+			<div class="details" class="margin">{{user.username}}</div>
+			<div class="details" class="margin">{{user.email}}</div>
+		</div>
+	</div>
+	
+	<h1 id="category_name">{{category.name}} Items</h1>
+	{% for i in items: %}
+	<ul>
+		<li>
+		<h2><a id="items" href="{{url_for('viewDescription', item_id=i.id)}}">{{i.name}}</a></h2>
+		</li>
+	</ul>
+	{% endfor %}
+</body>
+</html>

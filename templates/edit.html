@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+	<title>Edit Page</title>
+</head>
+<body>
+	<header>
+		<div id="title"><h1>Catalog App</h1></div>
+		<a id="login_button" href="{{url_for('gdisconnect')}}">Logout</a>
+		<a href="{{url_for('viewCatalog')}}"><img id="home" src="{{ url_for('static', filename='home_icon.png') }}"></a>
+	</header>
+	<div id="sidebar">
+		<div id="user_info">	
+			<div id="prof_pic" class="margin"><img src="{{user.picture}}"></div>
+			<div class="details" class="margin">{{user.username}}</div>
+			<div class="details" class="margin">{{user.email}}</div>
+		</div>
+	</div>
+	<h1>Edit Item</h1>
+	<form id="form_wrapper" action="{{url_for('editItem', item_id=item_id)}}" method="POST">
+		Name : <input type="text" name="name" placeholder="{{edited_item.name}}"><br><br>
+		
+		Description : <textarea name="description" rows="4" cols="50" placeholder="{{edited_item.description}}"></textarea><br><br>
+		<input id="submit_button" type="submit">
+		<a id="cancel_button" href="{{url_for('viewDescription', item_id = edited_item.id)}}">Cancel</a>
+	</form>
+	
+		
+</body>
+</html>
